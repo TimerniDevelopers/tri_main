@@ -1,0 +1,872 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Time research & innovation</title>
+    <meta name="description" content="research">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <!--=== fontawesome-free-5.15.2 ===-->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!--=== Google Fonts ===-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600&family=Viaoda+Libre&display=swap" rel="stylesheet">
+    <!--=== Bootstrap 5 ===-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!--=== Owl carousel 2.3.4===-->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <!--=== Magnific PopUp ===-->
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+    <!--=== Main Css ===-->
+    <link rel="stylesheet" href="assets/css/default.css">
+    <!--=== Style & Responsive  Css ===-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--=== Responsive Css ===-->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <style>
+        .team-page .t-member-profile-img::before {
+            content: "";
+            position: absolute;
+            border-top: 20px solid #312783;
+            border-left: 20px solid #312783;
+            height: 100%;
+            width: 80%;
+            left: 0;
+        }
+        
+        .team-page .t-member-profile-img::after {
+            content: "";
+            position: absolute;
+            border-left: 20px solid #E62552;
+            border-top: 20px solid #E62552;
+            border-bottom: 20px solid #E62552;
+            height: 100%;
+            width: 85%;
+            left: 20px;
+            top: 20px;
+        }
+        
+        .team-page .t-member-profile-img img {
+            position: relative;
+            z-index: 1;
+            margin-top: 40px;
+            max-width: 100%;
+            margin-left: 40px;
+        }
+        
+        .team-page .t-member-des {
+            position: relative;
+        }
+        
+        .team-page .t-member-des img {
+            width: 86%;
+            margin-left: 7%;
+        }
+        
+        .team-page .t-member-des .team-deg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .team-page .t-member-des .team-deg h5 {
+            font-weight: 500;
+            font-size: 18px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+        
+        .team-page .t-member-des .team-deg p {
+            font-weight: 400;
+            font-size: 14px;
+            text-align: center;
+            color: #BEC2C8;
+        }
+        
+        .team-page .social-info .f-s-icon>a {
+            display: inline-block;
+            text-align: center;
+            width: 45px;
+            height: 45px;
+            line-height: 45px;
+            border-radius: 50%;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            margin-right: 12px;
+        }
+        
+        .team-page .social-info .f-s-icon>a:nth-last-child(4) {
+            background: #2F80EC;
+        }
+        
+        .team-page .social-info .f-s-icon>a:nth-last-child(3) {
+            background: #61CFF3;
+        }
+        
+        .team-page .social-info .f-s-icon>a:nth-last-child(2) {
+            background: #2D9CDB;
+        }
+        
+        .team-page .social-info .f-s-icon>a:nth-last-child(1) {
+            background: #E9455A;
+            margin-right: 0px;
+        }
+        
+        .team-page .contct-c {
+            font-weight: 400;
+            font-size: 18px;
+            color: #231F20;
+        }
+        
+        .team-page .t-title {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 30px;
+            color: #312783;
+            margin-bottom: 10px;
+        }
+        
+        .team-page .m-con {
+            font-weight: 400;
+            font-size: 14px;
+            color: #231F20;
+        }
+        
+        .team-page .skills {
+            position: relative;
+        }
+        
+        .team-page .skills-bar .bar {
+            margin: 15px 0;
+        }
+        
+        .team-page .skills-bar .bar .info span {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        
+        .team-page .skills-bar .bar .info {
+            margin-bottom: 8px;
+            color: #07374a;
+        }
+        
+        .team-page .skills-bar .bar .progress-line {
+            position: relative;
+            height: 10px;
+            width: 100%;
+            background: #f0f0f0;
+            border-radius: 10px;
+            transform: scaleX(0);
+            transform-origin: left;
+            animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+        }
+        
+        .team-page .bar .progress-line span {
+            position: absolute;
+            background: #25b79f;
+            height: 100%;
+            border-radius: 10px;
+            transform: scaleX(0);
+            transform-origin: left;
+            text-transfrom=uppercase;
+            animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+        }
+        
+        @keyframes animate {
+            100% {
+                transform: scaleX(1);
+            }
+        }
+        
+        .team-page .progress-line .html {
+            width: 80%;
+        }
+        
+        .team-page .progress-line .css {
+            width: 70%;
+        }
+        
+        .team-page .progress-line .bootstrap {
+            width: 82%;
+        }
+        
+        .team-page .progress-line .javascript {
+            width: 62%;
+        }
+        
+        .team-page .progress-line .c {
+            width: 90%;
+        }
+        
+        .team-page .bar .progress-line span::before {
+            position: absolute;
+            content: "";
+            height: 0;
+            right: 0;
+            top: -14px;
+            width: 0;
+            border: 7px solid transparent;
+            border-bottom-width: 0px;
+            border-right-width: 0px;
+            border-top-style: #f0f0f0;
+            border-top-color: #07374a;
+        }
+        
+        .team-page .bar .progress-line span::after {
+            position: absolute;
+            right: 0;
+            top: -28px;
+            color: #f0f0f0;
+            font-size: 12px;
+            font-weight: 700;
+            background: #07374a;
+            padding: 1px 8px;
+            border-radius: 3px;
+        }
+        
+        .team-page .progress-line .html::after {
+            content: "80%";
+        }
+        
+        .team-page .progress-line .css::after {
+            content: "70%";
+        }
+        
+        .team-page .progress-line .bootstrap::after {
+            content: "82%";
+        }
+        
+        .team-page .progress-line .javascript::after {
+            content: "62%";
+        }
+        
+        .team-page .progress-line .c::after {
+            content: "90%";
+        }
+        
+        .team-page .education .edu-qua .uni-name {
+            font-weight: 500;
+            font-size: 14px;
+            color: #231F20;
+            padding-bottom: 10px;
+        }
+        
+        .team-page .education .edu-qua .duration,
+        .team-page .education .edu-qua .uni-con,
+        .team-page .education .edu-qua .grade,
+        .team-page .education .edu-qua .course-n {
+            font-weight: 400;
+            font-size: 14px;
+            color: #231F20;
+            padding-bottom: 3px;
+        }
+        
+        .team-page .education .edu-qua .duration {
+            color: #BEC2C8;
+        }
+        
+        .team-page .education .edu-qua .uni-con {
+            font-weight: 300;
+        }
+        
+        .team-page .edu-his {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .team-page .edu-his .edu-img {
+            flex-basis: 150px;
+        }
+        
+        .team-page .edu-his .cir-img {
+            flex-basis: 250px;
+        }
+        
+        @media (max-width: 767px) {
+            .team-page .skills {
+                width: 80%;
+            }
+            .team-page .skills-bar .bar .progress-line {
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- header start -->
+    <header id="header">
+        <div class="header-area">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/img/logo/f-logo.png" alt="logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-times"></i>
+                </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav m-auto">
+                            <li class="nav-item">
+                                <a class="nav-link " aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="services.html">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="project.html">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="contact.html">Contact Us</a>
+                            </li>
+                            <li class="nav-item pb-d-0">
+                                <div class="dropdown">
+                                    <a href="#" class="nav-link  toggle-none dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+
+                                        <span class="me-2">Career</span>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li class="nav-items">
+                                            <a class="nav-link dropdown-item" href="job.html">
+                                                <i class="fas fa-chevron-right"></i>
+                                                <span class="ms-2">Job</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-items">
+                                            <a class="nav-link dropdown-item" href="ambassador.html">
+                                                <i class="fas fa-chevron-right"></i>
+                                                <span class="ms-2">Ambassador</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-items">
+                                            <a class="nav-link dropdown-item" href="cv.html">
+
+                                                <i class="fas fa-chevron-right"></i>
+                                                <span class="ms-2">CV Clinic</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </li>
+
+                        </ul>
+                        <form class="d-flex align-items-center">
+                            <div class="form-inline d-none d-lg-block">
+                                <a href="#" class="top-search">
+                                    <i class="fas fa-search"></i>
+                                </a>
+                            </div>
+                            <div class="login">
+                                <a href="#">
+                                login
+                            </a>
+                            </div>
+                            <div class="dropdown d-none d-lg-block">
+                                <a href="#" class="flag-logo toggle-none dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="assets/img/icons/flag.png" alt="flag">
+                                    <i class="fas fa-chevron-down"></i>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <img src="assets/img/icons/flag.png" alt="flag">
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- header end -->
+
+
+    <main class="team-page">
+
+        <!-- Review start -->
+        <section class="team">
+            <div class="container">
+                <div class="page-heading">
+                    <div class="heading">
+                        <h2 class="s-heading">
+                            Team Member Details
+                        </h2>
+                    </div>
+                </div>
+                <div class="row mt-50">
+                    <div class="col-md-6 col-lg-5 col-xl-3 mb-25">
+                        <div class="t-member-profile position-relative overflow-hidden pb-20">
+                            <div class="t-member-profile-img position-relative ">
+                                <img src="assets/img/team/team.png " alt="team ">
+                            </div>
+
+                        </div>
+                        <div class="t-member-des">
+                            <img src="assets/img/team/name.png" alt="">
+                            <div class="team-deg">
+                                <h5>Imran Khan Abir</h5>
+                                <p>UI/UX Designer</p>
+                            </div>
+
+                        </div>
+                        <div class="social-info mt-30">
+                            <div class="d-flex align-items-center gap-3 mb-15">
+                                <div class="f-s-icon ">
+                                    <a href="# " class="so-f ">
+                                        <img src="assets/img/team/Vector.png " alt="facebook ">
+                                    </a>
+                                </div>
+                                <a href="tel:+88 (0) 174 396 6200" class="contct-c">01845345678</a>
+                            </div>
+                            <div class="d-flex align-items-center gap-3 mb-15">
+                                <div class="f-s-icon ">
+                                    <a href="# " class="so-f ">
+                                        <img src="assets/img/team/Vector (1).png " alt="facebook ">
+                                    </a>
+                                </div>
+                                <a href="mailto:imran.tri@gmail.com" class="contct-c">imran.tri@gmail.com</a>
+                            </div>
+
+
+                            <div class="f-s-icon mt-25">
+                                <a href="# " class="so-f ">
+                                    <img src="assets/img/icons/facebook.png " alt="facebook ">
+                                </a>
+                                <a href="# " class="so-t ">
+                                    <img src="assets/img/icons/twitter.png " alt="twitter ">
+                                </a>
+                                <a href="# " class="so-i ">
+                                    <img src="assets/img/icons/linkedin.png " alt="linkedin ">
+                                </a>
+                                <a href="# " class="so-l ">
+                                    <img src="assets/img/icons/instragram.png " alt="instragram ">
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6 col-lg-7 col-xl-9 mb-25">
+                        <div class="motivation">
+                            <h5 class="t-title">
+                                Motivation:
+                            </h5>
+                            <p class="m-con">
+                                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,
+                                content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still
+                                in their infancy.
+                            </p>
+                        </div>
+                        <div class="skill mt-30">
+                            <h5 class="t-title">
+                                Skill:
+                            </h5>
+                            <div class="skills">
+                                <div class="skills-bar">
+                                    <div class="bar-s">
+                                        <div class="row">
+                                            <div class="col-md-6 col-lg-4 bar">
+                                                <div class="info">
+                                                    <span>HTML</span>
+                                                </div>
+                                                <div class="progress-line"><span class="html"></span></div>
+
+                                            </div>
+                                            <div class="col-md-6 col-lg-4 bar">
+                                                <div class="info">
+                                                    <span>CSS</span>
+                                                </div>
+                                                <div class="progress-line"><span class="css"></span></div>
+                                            </div>
+                                            <div class="col-md-6 col-lg-4 bar">
+                                                <div class="info">
+                                                    <span>BOOTSTRAP</span>
+                                                </div>
+                                                <div class="progress-line"><span class="bootstrap"></span></div>
+                                            </div>
+                                            <div class="col-md-6 col-lg-4 bar">
+                                                <div class="info">
+                                                    <span>JAVASCRIPT</span>
+                                                </div>
+                                                <div class="progress-line">
+                                                    <span class="javascript"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="education mt-25">
+                    <div class="row">
+                        <div class="col-md-6 mb-25">
+                            <div class="edu-title">
+                                <h5 class="t-title">
+                                    Background :
+                                </h5>
+                            </div>
+                            <div class="edu-background mt-30">
+                                <div class="edu-his mb-25">
+                                    <div class="edu-img mb-15">
+                                        <img src="assets/img/team/carbon_education.png" alt="">
+                                    </div>
+                                    <div class="edu-qua">
+                                        <h5 class="uni-name">Bangladesh University of Engineering & Technology</h5>
+                                        <h6 class="course-n">Bsc in CSE</h6>
+                                        <p class="duration">2018-2022</p>
+                                        <p class="grade">Grade : 3.88 out of 4.00</p>
+                                        <p class="uni-con">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+                                    </div>
+
+                                </div>
+                                <div class="edu-his mb-25">
+                                    <div class="edu-img mb-15">
+                                        <img src="assets/img/team/carbon_education.png" alt="">
+                                    </div>
+                                    <div class="edu-qua">
+                                        <h5 class="uni-name">Bangladesh University of Engineering & Technology</h5>
+                                        <h6 class="course-n">Bsc in CSE</h6>
+                                        <p class="duration">2018-2022</p>
+                                        <p class="grade">Grade : 3.88 out of 4.00</p>
+                                        <p class="uni-con">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+                                    </div>
+
+                                </div>
+                                <div class="edu-his mb-25">
+                                    <div class="edu-img mb-15">
+                                        <img src="assets/img/team/carbon_education.png" alt="">
+                                    </div>
+                                    <div class="edu-qua">
+                                        <h5 class="uni-name">Bangladesh University of Engineering & Technology</h5>
+                                        <h6 class="course-n">Bsc in CSE</h6>
+                                        <p class="duration">2018-2022</p>
+                                        <p class="grade">Grade : 3.88 out of 4.00</p>
+                                        <p class="uni-con">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="col-md-6 mb-25">
+                            <div class="edu-title">
+                                <h5 class="t-title">
+                                    Experience :
+                                </h5>
+                            </div>
+                            <div class="exp-background  mt-30">
+                                <div class="edu-his mb-25">
+                                    <div class="edu-img mb-15">
+                                        <img src="assets/img/team/Vector (2).png" alt="">
+                                    </div>
+                                    <div class="edu-qua">
+                                        <h5 class="uni-name">Bangladesh University of Engineering & Technology</h5>
+
+                                        <p class="duration"> 19Sep, 2020 - Present </p>
+
+                                        <p class="uni-con">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+                                    </div>
+
+                                </div>
+                                <div class="edu-his mb-25">
+                                    <div class="edu-img mb-15">
+                                        <img src="assets/img/team/Vector (2).png" alt="">
+                                    </div>
+                                    <div class="edu-qua">
+                                        <h5 class="uni-name">Bangladesh University of Engineering & Technology</h5>
+
+                                        <p class="duration"> 19Sep, 2020 - Present </p>
+
+                                        <p class="uni-con">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+                                    </div>
+
+                                </div>
+                                <div class="edu-his mb-25">
+                                    <div class="edu-img mb-15">
+                                        <img src="assets/img/team/Vector (2).png" alt="">
+                                    </div>
+                                    <div class="edu-qua">
+                                        <h5 class="uni-name">Bangladesh University of Engineering & Technology</h5>
+
+                                        <p class="duration"> 19Sep, 2020 - Present </p>
+
+                                        <p class="uni-con">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+                                    </div>
+
+                                </div>
+                                <div class="edu-his mb-25">
+                                    <div class="edu-img mb-15">
+                                        <img src="assets/img/team/Vector (2).png" alt="">
+                                    </div>
+                                    <div class="edu-qua">
+                                        <h5 class="uni-name">Bangladesh University of Engineering & Technology</h5>
+
+                                        <p class="duration"> 19Sep, 2020 - Present </p>
+
+                                        <p class="uni-con">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-7 mb-25">
+                            <div class="edu-title">
+                                <h5 class="t-title">
+                                    Certificate :
+                                </h5>
+                            </div>
+                            <div class="cir-background mt-30">
+                                <div class="edu-his mb-25">
+                                    <div class="cir-img mb-15">
+                                        <img src="assets/img/team/cirti.png" alt="">
+                                    </div>
+                                    <div class="edu-qua">
+                                        <h5 class="uni-name">Bangladesh University of Engineering & Technology</h5>
+                                        <h6 class="course-n">Bsc in CSE</h6>
+                                        <p class="duration">2018-2022</p>
+                                        <p class="grade">Grade : 3.88 out of 4.00</p>
+                                        <p class="uni-con">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+                                    </div>
+
+                                </div>
+                                <div class="edu-his mb-25">
+                                    <div class="cir-img mb-15">
+                                        <img src="assets/img/team/cirti.png" alt="">
+                                    </div>
+                                    <div class="edu-qua">
+                                        <h5 class="uni-name">Bangladesh University of Engineering & Technology</h5>
+                                        <h6 class="course-n">Bsc in CSE</h6>
+                                        <p class="duration">2018-2022</p>
+                                        <p class="grade">Grade : 3.88 out of 4.00</p>
+                                        <p class="uni-con">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+                                    </div>
+
+                                </div>
+                                <div class="edu-his mb-25">
+                                    <div class="cir-img mb-15">
+                                        <img src="assets/img/team/cirti.png" alt="">
+                                    </div>
+                                    <div class="edu-qua">
+                                        <h5 class="uni-name">Bangladesh University of Engineering & Technology</h5>
+                                        <h6 class="course-n">Bsc in CSE</h6>
+                                        <p class="duration">2018-2022</p>
+                                        <p class="grade">Grade : 3.88 out of 4.00</p>
+                                        <p class="uni-con">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+                                    </div>
+
+                                </div>
+                                <div class="edu-his mb-25">
+                                    <div class="cir-img mb-15">
+                                        <img src="assets/img/team/cirti.png" alt="">
+                                    </div>
+                                    <div class="edu-qua">
+                                        <h5 class="uni-name">Bangladesh University of Engineering & Technology</h5>
+                                        <h6 class="course-n">Bsc in CSE</h6>
+                                        <p class="duration">2018-2022</p>
+                                        <p class="grade">Grade : 3.88 out of 4.00</p>
+                                        <p class="uni-con">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- about end -->
+    </main>
+    <!-- footer start -->
+
+    <!-- footer start -->
+    <footer id="footer ">
+        <div class="footer ">
+            <div class="container ">
+                <div class="row ">
+                    <div class="col-lg-5 col-xl-4 ">
+                        <div class="footer-l ">
+                            <div class="footer-logo ">
+                                <a href="index.html ">
+                                    <img src="assets/img/logo/footer-logo.png " alt="logo ">
+                                </a>
+                            </div>
+                            <div class="fo-con ">
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered you need to be sure there isn't anything embarrassing hidden in the middle of text. </p>
+                            </div>
+                            <div class="f-s-icon ">
+                                <a href="# " class="so-f ">
+                                    <img src="assets/img/icons/facebook.png " alt="facebook ">
+                                </a>
+                                <a href="# " class="so-t ">
+                                    <img src="assets/img/icons/twitter.png " alt="twitter ">
+                                </a>
+                                <a href="# " class="so-i ">
+                                    <img src="assets/img/icons/linkedin.png " alt="linkedin ">
+                                </a>
+                                <a href="# " class="so-l ">
+                                    <img src="assets/img/icons/instragram.png " alt="instragram ">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-xl-8 ">
+                        <div class="f-link ">
+                            <div class="f-link-h ">
+                                <h4 class="s-sub-heading ">
+                                    <span class="s-sub-c ">Pages </span>
+                                </h4>
+                                <ul class="mt-60 ">
+                                    <li>
+                                        <a href="index.html ">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="about.html ">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="services.html ">Services</a>
+                                    </li>
+                                    <li>
+                                        <a href="project.html ">Projects</a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html ">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="f-link-h ">
+                                <h4 class="s-sub-heading ">
+                                    <span class="s-sub-c ">Useful Links </span>
+                                </h4>
+                                <ul class="mt-60 ">
+                                    <li>
+                                        <a href="privacy.html ">Privacy Policy</a>
+                                    </li>
+                                    <li>
+                                        <a href="condition.html ">Terms & Conditions</a>
+                                    </li>
+                                    <li>
+                                        <a href="login.html ">Login</a>
+                                    </li>
+                                    <li>
+                                        <a href="career.html ">Career</a>
+                                    </li>
+                                    <li>
+                                        <a href="testimonial.html ">Testimonials</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="f-link-h ">
+                                <h4 class="s-sub-heading ">
+                                    <span class="s-sub-c ">Contact Info.</span>
+                                </h4>
+                                <div class="mt-60 ">
+                                    <div class="contact-info-f grid-2 ">
+                                        <div>
+                                            <div class="f-icons-f ">
+                                                <img src="assets/img/icons/location.png " alt="location ">
+                                                <p>
+                                                    <span>
+                                                Bangladesh <br>
+                                                East Rampura,Khilgaon<br>
+                                                Dhaka,1219</span>
+                                                </p>
+                                            </div>
+                                            <div class="f-icons-f ">
+                                                <img src="assets/img/icons/phone-line.png " alt="phone-line ">
+                                                <p>
+                                                    <a href="tel:+88 (0) 174 396 6200 ">+88 (0) 174 396 6200</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="f-icons-f ">
+                                                <img src="assets/img/icons/location.png " alt="location ">
+                                                <p>
+                                                    <span>
+                                            United Kingdom<br>
+                                            189 Foundry Lane<br>
+                                            Southampton SO153JZ</span>
+                                                </p>
+                                            </div>
+                                            <div class="f-icons-f pb-1 ">
+                                                <img src="assets/img/icons/phone-line.png " alt="phone-line ">
+                                                <p>
+                                                    <a href="tel:+44 (0) 238 052 8262 ">+44 (0) 238 052 8262</a><br>
+                                                </p>
+                                            </div>
+                                            <div class="f-icons-f ">
+                                                <img src="assets/img/icons/phone-line.png " alt="phone-line ">
+                                                <p>
+                                                    <a href="tel:+44 (0) 238 052 8262 ">+44 (0) 238 052 8262</a><br>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="subscribes-f ">
+                                    <h4 class="s-sub-heading text-start pt-2 pb-3 ">
+                                        <span class="s-sub-c ">Subscribe Us</span>
+                                    </h4>
+                                    <form class="subs-d ">
+                                        <input name="email " class="form-control " type="email " autocorrect="off " autocapitalize="off " placeholder="Enter Your Email ">
+                                        <button type="submit " class="cmn-btn-blue btn-green ">Subscribe</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright text-center ">
+                    <p>Copyright 2021 <i class="fas fa-copyright "></i> <a href="index.html ">Timerni.com</a> All Rights Reserved
+                    </p>
+                </div>
+            </div>
+            <div class="f-bottom-img ">
+                <img src="assets/img/footer-bg.png " alt="footer " loading="lazy ">
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+    <!--=== All Plugin ===-->
+    <!--============= Jquery-3.6.0 =============-->
+    <script src="assets/js/jquery-3.6.0.min.js "></script>
+    <!--=== Popper  v2.9.2 js ===-->
+    <script src="assets/js/popper.min.js "></script>
+    <!--=== Bootstrap 5 js ===-->
+    <script src="assets/js/bootstrap.min.js "></script>
+    <!--=== owl carousel ===-->
+    <script src="assets/js/owl.carousel.min.js "></script>
+    <!--=== magnific-popup ===-->
+    <script src="assets/js/magnific-popup.min.js "></script>
+    <!--=== Main js ===-->
+    <script src="assets/js/main.js "></script>
+
+</body>
+
+</html>

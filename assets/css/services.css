@@ -1,0 +1,37 @@
+.development-img {
+    position: relative;
+}
+
+.development-img img:nth-child(even) {
+    position: absolute;
+    left: 20%;
+    top: 20%;
+}
+
+
+/* broadcasting */
+
+.broadc-m {
+    margin-top: -100px;
+}
+
+.broadcasting-banner .overlay::after {
+    z-index: 1;
+}
+
+.broadcasting-item .pop_up_item img {
+    max-width: 100% !important;
+}
+
+.broadcasting-banner .broadcasting-slider.owl-theme .owl-dots .owl-dot span {
+    background: rgba(49, 39, 131, 0.3);
+}
+
+.broadcasting-slider.owl-theme .owl-dots .owl-dot.active span,
+.broadcasting-slider.owl-theme .owl-dots .owl-dot:hover span {
+    background: var(--s-primary-color);
+}
+
+.broadcasting-item .radious-icon {
+    border: none;
+}
