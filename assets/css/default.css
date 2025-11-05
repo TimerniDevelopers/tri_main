@@ -1876,9 +1876,7 @@ Last change:    26/01/22 [fixed Float bug, vf]
     @media (min-width: 768px) and (max-width: 991px) {}
     
     @media (min-width: 320px) and (max-width: 991px) {
-        #header {
-            position: fixed
-        }
+     
         .header-area .dropdown-menu[data-bs-popper] {
             margin-top: .75rem;
         }
