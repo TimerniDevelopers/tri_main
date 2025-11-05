@@ -171,7 +171,7 @@
             border-radius: 10px;
             transform: scaleX(0);
             transform-origin: left;
-            text-transfrom=uppercase;
+            text-transform: capitalize;
             animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
         }
         
@@ -284,7 +284,116 @@
         .team-page .edu-his .cir-img {
             flex-basis: 250px;
         }
-        
+        .team-block-two .inner-box {
+        position: relative;
+        margin-bottom: 30px;
+        padding-top: 70px;
+        transition: all 0.3s 
+    ease;
+        transition-behavior: normal;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+        transition-delay: 0s;
+        transition-property: all;
+    }
+   
+.team-item {
+  border-radius: 6px 6px 6px 6px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px;
+}
+.team-item .team-inner {
+  position: relative;
+  transition: all 0.3s ease 0s;
+  transform: translateX(0);
+}
+.team-item .team-content {
+  border-radius: 0 0 5px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  margin: 0;
+  padding: 14px 20px 16px 20px;
+  background: #312783;
+  margin-bottom: 30px;
+  position: unset;
+  opacity: 1;
+  position: relative;
+  margin-bottom: 0;
+}
+.team-item .team-content .team-name {
+  font-size: 20px;
+  line-height: 30px;
+  color: #f9fdff;
+  font-weight: 400;
+}
+.team-item .team-content .team-name:hover {
+  color: #ffffffd6;
+}
+
+
+.team-item .team-content .plus-team .social-icons1 a i {
+  color: #fff;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  margin: 0;
+  top: unset;
+      padding: 8px 0px;
+}
+.team-item .team-content .plus-team .social-icon:hover{
+  background-color: #000;
+}
+.team-item .team-content .plus-team i.fa-share {
+  background-color: #0f836e;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.team-item .team-content .plus-team:hover .social-icons1 {
+    visibility: visible;
+    opacity: 1;
+    z-index: 2;
+    transform: scaleY(1);
+}
+.team-item .team-content .plus-team .social-icons1 {
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    width: 50px;
+    background: #22cbad;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-top: 14px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s 
+ease 0s;
+    z-index: -1;
+    transform: scaleY(0);
+    transform-origin: bottom;
+}
+.team-inner img{
+    width: 100%;
+}
+.team-title{
+    color: #fff;
+}
+.read-btn{
+    font-weight: 400;
+    background: transparent;
+    border-bottom:1px solid var(--s-primary-color);
+    line-height: 1.2;
+}
+
         @media (max-width: 767px) {
             .team-page .skills {
                 width: 80%;
@@ -405,52 +514,33 @@
                 </div>
                 <div class="row mt-50">
                     <div class="col-md-6 col-lg-5 col-xl-3 mb-25">
-                        <div class="t-member-profile position-relative overflow-hidden pb-20">
-                            <div class="t-member-profile-img position-relative ">
-                                <img src="assets/img/team/team.png " alt="team ">
+                        <div class="team-item overflow-hidden pb-20">
+                            <div class="team-inner">
+                                <img src="https://timerni.com/assets/uploads/team_member/member-1646829475.png" alt="team">
                             </div>
-
-                        </div>
-                        <div class="t-member-des">
-                            <img src="assets/img/team/name.png" alt="">
-                            <div class="team-deg">
-                                <h5>Imran Khan Abir</h5>
-                                <p>UI/UX Designer</p>
-                            </div>
-
-                        </div>
-                        <div class="social-info mt-30">
-                            <div class="d-flex align-items-center gap-3 mb-15">
-                                <div class="f-s-icon ">
-                                    <a href="# " class="so-f ">
-                                        <img src="assets/img/team/Vector.png " alt="facebook ">
-                                    </a>
+                            <div class="team-content">
+                                <div class="team-desc">
+                                    <p class="team-name">Shah Siddique</p>
+                                    <p class="team-title">Business Consultant</p>
                                 </div>
-                                <a href="tel:+88 (0) 174 396 6200" class="contct-c">01845345678</a>
-                            </div>
-                            <div class="d-flex align-items-center gap-3 mb-15">
-                                <div class="f-s-icon ">
-                                    <a href="# " class="so-f ">
-                                        <img src="assets/img/team/Vector (1).png " alt="facebook ">
-                                    </a>
+                                <div class="plus-team">
+                                    <div class="social-icons1">
+                                        <a href="#" class="social-icon">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                        <a href="#" class="social-icon">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                        <a href="#" class="social-icon">
+                                            <i class="fab fa-whatsapp"></i>
+                                        </a>
+                                        <a href="#" class="social-icon">
+                                            <i class="fab fa-linkedin"></i>
+                                        </a>
+                                        
+                                    </div>
+                                    <i class="fas fa-share"></i>
                                 </div>
-                                <a href="mailto:imran.tri@gmail.com" class="contct-c">imran.tri@gmail.com</a>
-                            </div>
-
-
-                            <div class="f-s-icon mt-25">
-                                <a href="# " class="so-f ">
-                                    <img src="assets/img/icons/facebook.png " alt="facebook ">
-                                </a>
-                                <a href="# " class="so-t ">
-                                    <img src="assets/img/icons/twitter.png " alt="twitter ">
-                                </a>
-                                <a href="# " class="so-i ">
-                                    <img src="assets/img/icons/linkedin.png " alt="linkedin ">
-                                </a>
-                                <a href="# " class="so-l ">
-                                    <img src="assets/img/icons/instragram.png " alt="instragram ">
-                                </a>
                             </div>
                         </div>
 
@@ -458,12 +548,12 @@
                     <div class="col-md-6 col-lg-7 col-xl-9 mb-25">
                         <div class="motivation">
                             <h5 class="t-title">
-                                Motivation:
+                                About:
                             </h5>
                             <p class="m-con">
                                 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,
                                 content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still
-                                in their infancy.
+                                in their infancy. <button class="read-btn">Read More</button>
                             </p>
                         </div>
                         <div class="skill mt-30">
@@ -530,7 +620,7 @@
                                         <h6 class="course-n">Bsc in CSE</h6>
                                         <p class="duration">2018-2022</p>
                                         <p class="grade">Grade : 3.88 out of 4.00</p>
-                                        <p class="uni-con">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+                                        <p class="uni-con">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.<button class="read-btn">Read More</button> </p>
                                     </div>
 
                                 </div>
@@ -543,7 +633,7 @@
                                         <h6 class="course-n">Bsc in CSE</h6>
                                         <p class="duration">2018-2022</p>
                                         <p class="grade">Grade : 3.88 out of 4.00</p>
-                                        <p class="uni-con">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+                                        <p class="uni-con">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. <button class="read-btn">Read More</button></p>
                                     </div>
 
                                 </div>
@@ -580,7 +670,7 @@
 
                                         <p class="duration"> 19Sep, 2020 - Present </p>
 
-                                        <p class="uni-con">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+                                        <p class="uni-con">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. <button class="read-btn">Read More</button></p>
                                     </div>
 
                                 </div>
@@ -593,7 +683,7 @@
 
                                         <p class="duration"> 19Sep, 2020 - Present </p>
 
-                                        <p class="uni-con">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+                                        <p class="uni-con">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. <button class="read-btn">Read More</button></p>
                                     </div>
 
                                 </div>
@@ -629,14 +719,17 @@
 
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-7 mb-25">
-                            <div class="edu-title">
-                                <h5 class="t-title">
-                                    Certificate :
-                                </h5>
-                            </div>
-                            <div class="cir-background mt-30">
+                    
+                </div>
+                <div class="education certifacte mt-25">
+                    <div class="edu-title">
+                        <h5 class="t-title">
+                            Certificate :
+                        </h5>
+                    </div>
+                    <div class="row mt-30">
+                        <div class="col-md-6 mb-20">
+                            <div class="cir-background">
                                 <div class="edu-his mb-25">
                                     <div class="cir-img mb-15">
                                         <img src="assets/img/team/cirti.png" alt="">
@@ -646,57 +739,65 @@
                                         <h6 class="course-n">Bsc in CSE</h6>
                                         <p class="duration">2018-2022</p>
                                         <p class="grade">Grade : 3.88 out of 4.00</p>
-                                        <p class="uni-con">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+                                        <p class="uni-con">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. <button class="read-btn">Read More</button></p>
                                     </div>
-
-                                </div>
-                                <div class="edu-his mb-25">
-                                    <div class="cir-img mb-15">
-                                        <img src="assets/img/team/cirti.png" alt="">
-                                    </div>
-                                    <div class="edu-qua">
-                                        <h5 class="uni-name">Bangladesh University of Engineering & Technology</h5>
-                                        <h6 class="course-n">Bsc in CSE</h6>
-                                        <p class="duration">2018-2022</p>
-                                        <p class="grade">Grade : 3.88 out of 4.00</p>
-                                        <p class="uni-con">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
-                                    </div>
-
-                                </div>
-                                <div class="edu-his mb-25">
-                                    <div class="cir-img mb-15">
-                                        <img src="assets/img/team/cirti.png" alt="">
-                                    </div>
-                                    <div class="edu-qua">
-                                        <h5 class="uni-name">Bangladesh University of Engineering & Technology</h5>
-                                        <h6 class="course-n">Bsc in CSE</h6>
-                                        <p class="duration">2018-2022</p>
-                                        <p class="grade">Grade : 3.88 out of 4.00</p>
-                                        <p class="uni-con">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
-                                    </div>
-
-                                </div>
-                                <div class="edu-his mb-25">
-                                    <div class="cir-img mb-15">
-                                        <img src="assets/img/team/cirti.png" alt="">
-                                    </div>
-                                    <div class="edu-qua">
-                                        <h5 class="uni-name">Bangladesh University of Engineering & Technology</h5>
-                                        <h6 class="course-n">Bsc in CSE</h6>
-                                        <p class="duration">2018-2022</p>
-                                        <p class="grade">Grade : 3.88 out of 4.00</p>
-                                        <p class="uni-con">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
-                                    </div>
-
+    
                                 </div>
                             </div>
-
-
                         </div>
-
+                        <div class="col-md-6 mb-20">
+                            <div class="cir-background">
+                                <div class="edu-his mb-25">
+                                    <div class="cir-img mb-15">
+                                        <img src="assets/img/team/cirti.png" alt="">
+                                    </div>
+                                    <div class="edu-qua">
+                                        <h5 class="uni-name">Bangladesh University of Engineering & Technology</h5>
+                                        <h6 class="course-n">Bsc in CSE</h6>
+                                        <p class="duration">2018-2022</p>
+                                        <p class="grade">Grade : 3.88 out of 4.00</p>
+                                        <p class="uni-con">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. <button class="read-btn">Read More</button></p>
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-20">
+                            <div class="cir-background">
+                                <div class="edu-his mb-25">
+                                    <div class="cir-img mb-15">
+                                        <img src="assets/img/team/cirti.png" alt="">
+                                    </div>
+                                    <div class="edu-qua">
+                                        <h5 class="uni-name">Bangladesh University of Engineering & Technology</h5>
+                                        <h6 class="course-n">Bsc in CSE</h6>
+                                        <p class="duration">2018-2022</p>
+                                        <p class="grade">Grade : 3.88 out of 4.00</p>
+                                        <p class="uni-con">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-20">
+                            <div class="cir-background">
+                                <div class="edu-his mb-25">
+                                    <div class="cir-img mb-15">
+                                        <img src="assets/img/team/cirti.png" alt="">
+                                    </div>
+                                    <div class="edu-qua">
+                                        <h5 class="uni-name">Bangladesh University of Engineering & Technology</h5>
+                                        <h6 class="course-n">Bsc in CSE</h6>
+                                        <p class="duration">2018-2022</p>
+                                        <p class="grade">Grade : 3.88 out of 4.00</p>
+                                        <p class="uni-con">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
             </div>
         </section>
         <!-- about end -->
